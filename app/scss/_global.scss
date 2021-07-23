@@ -1,0 +1,23 @@
+// min:0.8rem + 0.225% from width devaice (13.4px)..... for devaice 1440 px: 0.8 rem (12.8px)+ 0.225% from 1440 px (3.2px)= 16px (1rem)
+:root {
+    font-size: calc(0.8rem + 0.225vw);
+}
+
+.container-fluid {
+    max-width: 1460px;
+    padding: 10px;
+    padding-right: 10px;
+    margin: 0 auto;
+}
+
+.title {
+    @extend %title-font;
+}
+
+.logo__link {
+    font-family: Larsseit_bold, sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.4em;
+    letter-spacing: -0.035em;
+    color: #62D0DF;
+}
