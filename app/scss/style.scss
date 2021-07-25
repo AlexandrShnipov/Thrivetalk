@@ -180,7 +180,7 @@
         background-color: #62D0DF;
         display: flex;
         flex-direction: column;
-        padding-right: 11.3rem;
+        padding-right: 1rem;
         padding-left: 11.2rem;
         margin-left: -11.2rem;
     }
@@ -200,6 +200,7 @@
         color: $light;
         line-height: 1.58em;
         padding-bottom: 5.75rem;
+        max-width: 34.5rem;
     }
 
     &__text--small {
