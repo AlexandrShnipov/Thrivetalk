@@ -169,9 +169,7 @@
 }
 
 .cause {
-    background-color: #62D0DF;
-    margin-left: -10px;
-
+       
     &__container {
         margin-left: 11.2rem;
         display: grid;
@@ -179,9 +177,12 @@
     }
 
     &__description {
+        background-color: #62D0DF;
         display: flex;
         flex-direction: column;
         padding-right: 11.3rem;
+        padding-left: 11.2rem;
+        margin-left: -11.2rem;
     }
 
     &__slogan {
