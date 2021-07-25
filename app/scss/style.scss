@@ -5,16 +5,21 @@
 
 .wrapper {
     display: grid;
-    grid-template: minmax(80px, auto) 1fr minmax(80px, auto) / 1fr;
+    grid-template: minmax(80px, auto) 1fr minmax(80px, auto) /1fr;
     grid-template-areas:
-        "header"
+        "wrap"
         "main"
         "footer";
 }
 
+.wrap {
+    overflow: hidden;
+    grid-area: wrap;
+
+}
+
 .header {
     display: grid;
-    grid-area: header;
 
     &__container {
         margin-left: 11.2rem;
@@ -24,7 +29,7 @@
         justify-content: space-between;
     }
 
-    &__logo{
+    &__logo {
         margin-top: -0.4em;
     }
 
@@ -43,7 +48,7 @@
 
 .menu__list {
     display: flex;
-    max-width: 18.5rem;
+    max-width: 16.64em;
     padding-top: 0.9em;
 
     &-link {
@@ -53,7 +58,7 @@
         padding-left: 0.9em;
         padding-right: 0.9em;
         padding-bottom: 0.9em;
-            }
+    }
 
     &-link--active {
         position: relative;
@@ -81,7 +86,88 @@
 .main {
     display: grid;
     grid-area: main;
+    grid-template: minmax(760px, auto) minmax(607px, auto) minmax(366px, auto) minmax(2096px, auto) minmax(800px, auto) minmax(800px, auto) minmax(460px, auto) / 1fr;
 }
+
+.description {
+    &__container {
+        margin-left: 11.2rem;
+        display: grid;
+        grid-template: minmax(760px, auto) / repeat(auto-fit, minmax(500px, 1fr));
+    }
+
+    &__content {
+        display: grid;
+        grid-auto-flow: row;
+        grid-template: minmax(64px, auto) minmax(167px, auto) minmax(161px, auto) 1fr / 1fr;
+        margin-top: 6.8em;
+        position: relative;
+        z-index: 2;
+    }
+
+    &__slogan {
+        font-family: Larsseit_bold, sans-serif;
+        font-size: 3rem;
+        line-height: 1.1em;
+        letter-spacing: -0.035em;
+        color: $default;
+        max-width: 10.1em;
+    }
+
+    &__text {
+        @extend %text-font;
+        line-height: 1.9em;
+        color: $default;
+        max-width: 19.7em;
+    }
+
+    &__links {
+        margin-top: 3.9rem;
+        display: flex;
+        justify-content: space-between;
+        max-width: 21.1rem;
+    }
+
+    &__link {
+        font-family: Larsseit_bold, sans-serif;
+        font-size: 1rem;
+        line-height: 1.25em;
+        letter-spacing: 0.1em;
+        align-self: start;
+    }
+
+    &__link--who-am-i {
+        color: $light;
+        background-color: #F9B640;
+        padding: 0.94em 1.875em;
+    }
+
+    &__link--what-to-do {
+        padding: 0.94em 1.875em 0.94em 0;
+        color: #FAB63E;
+    }
+
+    &__img-wrapper {
+        // display: grid;
+        width: 50rem;
+        height: 34.06rem;
+        border-radius: 312px;
+        overflow: hidden;
+        transform: rotate(329deg) translate(-35px, 0px);
+        z-index: -1;
+        position: relative;
+           }
+
+    &__img-container {
+        width: 145%;
+        height: 140%;
+        background: linear-gradient(213.71deg, #FFFFFF 11.23%, rgba(255, 255, 255, 0) 48.4%), url('../images/description-img2.png');
+        background-repeat: no-repeat;
+        transform: rotate(32deg) translate(-396px, 19px);
+        background-size: cover;
+    }
+}
+
 
 .footer {
     grid-area: footer;
