@@ -169,11 +169,11 @@
 }
 
 .cause {
-       
+
     &__container {
         margin-left: 11.2rem;
         display: grid;
-        grid-template:  1fr / 58.5% 1fr;
+        grid-template: 1fr / 58.5% 1fr;
     }
 
     &__description {
@@ -214,13 +214,35 @@
         padding: 0 0 90% 0;
     }
 
-    &__img{
+    &__img {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
         object-fit: cover;
+
+    }
+}
+
+.about {
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        padding: 9.75rem 29.44% 4.38rem 7.36%;
+    }
+
+    &__title {
+        color: $default;
+        margin-right: 15.6%;
+    }
+
+    &__text {
+        @extend %text-font;
+        color: $default;
+        line-height: 1.48em;
+        letter-spacing: 0.005em;
+        max-width: 24.67em;
 
     }
 }
