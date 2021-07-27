@@ -5,9 +5,10 @@
 
 .container-fluid {
     max-width: 1440px;
-    // padding-left: 10px;
-    // padding-right: 10px;
+    // padding-left: 1px;
+    // padding-right: 1px;
     margin: 0 auto;
+    
 }
 
 .title {
@@ -20,5 +21,18 @@
     line-height: 1.4em;
     letter-spacing: -0.035em;
     color: #62D0DF;
+}
+
+.section__link{
+    font-family: Larsseit_bold, sans-serif;
+    font-size: 1rem;
+    line-height: 1.25em;
+}
+
+.section__description{
+    padding-top: 10.75%;
+    padding-left: 11.08%;
+    padding-right: 18.29%;
+    padding-bottom: 5.25%;
 }
 
