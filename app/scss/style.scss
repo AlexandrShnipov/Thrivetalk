@@ -20,7 +20,7 @@
         margin-left: 11.2rem;
         margin-right: 8.1rem;
         padding-top: 1.7rem;
-        display: flex;
+                display: flex;
         justify-content: space-between;
     }
 
@@ -34,7 +34,7 @@
         color: $light;
         font-family: Larsseit_bold, sans-serif;
         font-size: 0.9rem;
-        line-height: 0.9em;
+        line-height: 0.9;
         padding: 1.3em 1.9em;
         background-color: #62D0DF;
         border-radius: 50em;
@@ -48,7 +48,7 @@
 
     &-link {
         font-size: 0.9rem;
-        line-height: 1.1em;
+        line-height: 1.1;
         color: $default;
         padding-left: 0.9em;
         padding-right: 0.9em;
@@ -83,25 +83,26 @@
 }
 
 .description {
-    &__container {
+       &__container {
         margin-left: 11.2rem;
         display: grid;
         grid-template: minmax(765px, auto) / repeat(auto-fit, minmax(500px, 1fr));
         overflow-x: clip;
-    }
+            }
 
     &__content {
         display: grid;
         grid-auto-flow: row;
         grid-template: minmax(64px, auto) 1fr minmax(161px, auto) 1fr / 1fr;
         margin-top: 10.2rem;
+        padding-bottom: 4.7em;
 
     }
 
     &__slogan {
         font-family: Larsseit_bold, sans-serif;
         font-size: 3rem;
-        line-height: 1.1em;
+        line-height: 1.1;
         letter-spacing: -0.035em;
         color: $default;
         max-width: 10.1em;
@@ -109,7 +110,7 @@
 
     &__text {
         @extend %text-font;
-        line-height: 1.9em;
+        line-height: 1.9;
         color: $default;
         max-width: 19.7em;
     }
@@ -124,7 +125,7 @@
     &__link {
         font-family: Larsseit_bold, sans-serif;
         font-size: 1rem;
-        line-height: 1.25em;
+        line-height: 1.25;
         letter-spacing: 0.1em;
         align-self: start;
     }
@@ -181,7 +182,7 @@
         font-family: Larsseit_bold, sans-serif;
         color: $light;
         font-size: 2.25rem;
-        line-height: 0.64em;
+        line-height: 0.64;
         letter-spacing: -0.006em;
         padding-top: 4.19em;
         padding-bottom: 2.08em;
@@ -190,7 +191,7 @@
     &__text {
         @extend %text-font;
         color: $light;
-        line-height: 1.58em;
+        line-height: 1.58;
         padding-bottom: 5.75rem;
         max-width: 34.5rem;
     }
@@ -232,176 +233,174 @@
     &__text {
         @extend %text-font;
         color: $default;
-        line-height: 1.48em;
+        line-height: 1.48;
         letter-spacing: 0.005em;
         max-width: 24.67em;
 
     }
 }
 
-// .planning {
-//     display: flex;
-//     flex-direction: column;
+.planning {
+    &__title {
+        color: rgba(34, 53, 111, 0.5);
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
 
-//     &__title {
-//         color: rgba(34, 53, 111, 0.5);
-//         text-align: center;
-//         margin-bottom: 1.5rem;
-//     }
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(4, 360px);
+        grid-auto-rows: 360px;
+        margin-bottom: 7.5rem;
 
-//     &__items {
-//         display: grid;
-//         grid-template-columns: repeat(4, 360px);
-//         grid-auto-rows: 360px;
-//         margin-bottom: 7.5rem;
+    }
 
-//     }
+    &__item {
+        padding-top: 4.5rem;
+        padding-left: 4.88rem;
+        padding-right: 3.13rem;
+    }
 
-//     &__item {
-//         padding-top: 4.5rem;
-//         padding-left: 4.88rem;
-//         padding-right: 3.13rem;
-//     }
+    &__item:first-child {
+        background-color: #FFE2DE;
+    }
 
-//     &__item:first-child {
-//         background-color: #FFE2DE;
-//     }
+    &__item:nth-child(2) {
+        background-color: #C4E769;
+    }
 
-//     &__item:nth-child(2) {
-//         background-color: #C4E769;
-//     }
+    &__item:nth-child(3) {
+        background-color: #62D0DF;
+    }
 
-//     &__item:nth-child(3) {
-//         background-color: #62D0DF;
-//     }
+    &__item:last-child {
+        background-color: #0052C1;
+    }
 
-//     &__item:last-child {
-//         background-color: #0052C1;
-//     }
+    &__slogan {
+        display: inline-block;
+        font-family: Larsseit_bold, sans-serif;
+        color: $light;
+        font-size: 2rem;
+        line-height: 1.2;
+        letter-spacing: -0.006em;
+        padding-top: 0.72em;
+        position: relative;
 
-//     &__slogan {
-//         display: inline-block;
-//         font-family: Larsseit_bold, sans-serif;
-//         color: $light;
-//         font-size: 2rem;
-//         line-height: 1.2em;
-//         letter-spacing: -0.006em;
-//         padding-top: 0.72em;
-//         position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -25.5px;
+            height: 1px;
+            width: 255px;
+            background-color: #fff;
+        }
 
-//         &::before {
-//             content: '';
-//             position: absolute;
-//             top: 0;
-//             left: -25.5px;
-//             height: 1px;
-//             width: 255px;
-//             background-color: #fff;
-//         }
+        &::after {
+            content: "";
+            position: absolute;
+            left: -20px;
+            top: 33px;
+            background-color: #E9B730;
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+        }
+    }
 
-//         &::after {
-//             content: "";
-//             position: absolute;
-//             left: -20px;
-//             top: 33px;
-//             background-color: #E9B730;
-//             width: 9px;
-//             height: 9px;
-//             border-radius: 50%;
-//         }
-//     }
+    &__items--big {
+        display: grid;
+        grid-template-columns: repeat(3, 480px);
+        grid-auto-rows: 480px;
+    }
 
-//     &__items--big {
-//         display: grid;
-//         grid-template-columns: repeat(3, 480px);
-//         grid-auto-rows: 480px;
-//     }
+    &__item--big {
+        padding-top: 6rem;
+        padding-left: 6.5rem;
+        padding-right: 13.69rem;
+    }
 
-//     &__item--big {
-//         padding-top: 6rem;
-//         padding-left: 6.5rem;
-//         padding-right: 13.69rem;
-//     }
+    &__item--big:first-child {
+        background-color: #22356F;
+    }
 
-//     &__item--big:first-child {
-//         background-color: #22356F;
-//     }
+    &__item--big:nth-child(2) {
+        background-color: #0052C1;
+    }
 
-//     &__item--big:nth-child(2) {
-//         background-color: #0052C1;
-//     }
+    &__item--big:nth-child(3) {
+        background: url(../images/planning-img.png) no-repeat;
+    }
 
-//     &__item--big:nth-child(3) {
-//         background: url(../images/planning-img.png) no-repeat;
-//     }
+    &__item--big:nth-child(4) {
+        background-color: #62D0DF;
+    }
 
-//     &__item--big:nth-child(4) {
-//         background-color: #62D0DF;
-//     }
+    &__item--big:nth-child(5) {
+        background-color: #DEE1FF;
+    }
 
-//     &__item--big:nth-child(5) {
-//         background-color: #DEE1FF;
-//     }
+    &__item--big:last-child {
+        background-color: #8F00FF;
+    }
 
-//     &__item--big:last-child {
-//         background-color: #8F00FF;
-//     }
+    &__slogan--big {
+        padding-top: 0.94em;
+        position: relative;
+    }
 
-//     &__slogan--big {
-//         padding-top: 0.94em;
-//         position: relative;
-//     }
+    &__slogan.planning__slogan--big {
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -34px;
+            height: 1px;
+            width: 340px;
+            background-color: #fff;
+        }
 
-//     &__slogan.planning__slogan--big {
-//         &::before {
-//             content: '';
-//             position: absolute;
-//             top: 0;
-//             left: -34px;
-//             height: 1px;
-//             width: 340px;
-//             background-color: #fff;
-//         }
+        &::after {
+            content: "";
+            position: absolute;
+            left: -30px;
+            top: 40px;
+            background-color: #E9B730;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+    }
 
-//         &::after {
-//             content: "";
-//             position: absolute;
-//             left: -30px;
-//             top: 40px;
-//             background-color: #E9B730;
-//             width: 12px;
-//             height: 12px;
-//             border-radius: 50%;
-//         }
-//     }
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
 
-//     &__cards {
-//         display: grid;
-//         grid-template-columns: repeat(3, 1fr);
-//     }
+    &__card {
+        display: grid;
+        padding: 3.44rem 4.81rem 4.81rem 6.56rem;
+        color: $default;
+        font-family: Larsseit_regular, sans-serif
+    }
 
-//     &__card {
-//         padding: 3.44rem 4.81rem 4.81rem 6.56rem;
-//         color: $default;
-//         font-family: Larsseit_regular, sans-serif
-//     }
+    &__card-title {
+        font-family: inherit;
+        font-size: 1.75rem;
+        line-height: 1.25;
+        margin-bottom: 1.75em;
+    }
 
-//     &__card-title {
-//         font-family: inherit;
-//         font-size: 1.75rem;
-//         line-height: 1.25em;
-//         margin-bottom: 1.75em;
-//     }
+    &__card-text {
+        font-family: inherit;
+        font-size: 1rem;
+        line-height: 1.69;
+        letter-spacing: -0.03em;
+        color: rgba(34, 53, 111, 0.5);
 
-//     &__card-text {
-//         font-family: inherit;
-//         font-size: 1rem;
-//         line-height: 1.69em;
-//         letter-spacing: -0.03em;
-//         color: rgba(34, 53, 111, 0.5);
-
-//     }
-// }
+    }
+}
 
 .addition {
     display: grid;
@@ -422,6 +421,10 @@
     //     height: 100%;
     //     object-fit: cover;
     // }
+    &__description {
+        padding-left: 11.08%;
+    }
+
 
     &__title {
         color: inherit;
@@ -431,7 +434,7 @@
     &__text {
         font-family: Larsseit_bold, sans-serif;
         font-size: 2.25rem;
-        line-height: 1.5em;
+        line-height: 1.5;
         letter-spacing: -0.01em;
         color: inherit;
         margin-bottom: 4.22em;
@@ -453,7 +456,7 @@
 
     &__description {
         background-color: #22356F;
-        ;
+        padding-left: 18.75%;
     }
 
     &__title {
@@ -463,14 +466,14 @@
     &__slogan {
         font-family: Larsseit_bold, sans-serif;
         font-size: 4rem;
-        line-height: 1.25em;
+        line-height: 1.25;
         margin-bottom: 1.07em;
     }
 
     &__text {
         font-family: Larsseit_regular, sans-serif;
         font-size: 2.25rem;
-        line-height: 1.55em;
+        line-height: 1.55;
         max-width: 36.19rem;
         margin-bottom: 1.67em;
     }
@@ -488,7 +491,7 @@
 
     &__items {
         display: grid;
-        max-width: 765px;
+        // max-width: 765px;
         padding-top: 6.1rem;
         padding-left: 4.25rem;
         grid-template: auto / repeat(3, 1fr);
@@ -496,6 +499,7 @@
     }
 
     &__item-title {
+        font-family: Larsseit_bold, sans-serif;
         font-size: inherit;
         letter-spacing: -0.006em;
         color: $default;
@@ -505,6 +509,7 @@
 
     &__item-text {
         max-width: 75%;
+        font-family: Larsseit_regular, sans-serif;
         font-size: inherit;
         line-height: 1.79;
         letter-spacing: -0.006em;
@@ -513,11 +518,14 @@
         &>span {
             display: block;
         }
+
+        &.contacts__item-text--address {
+            max-width: 60%;
+        }
     }
 
     &__item-links {
         padding-top: 2.14em;
-        // font-size: 0.875rem;
     }
 
     &__item-link {
@@ -532,7 +540,20 @@
 
 
 .footer {
+    display: grid;
     grid-area: footer;
+    background-color: #62D0DF;
+    font-family: Larsseit_bold, sans-serif;
+    color: $light;
+    padding: 2em 0 1.625em 11.2em;
+
+    &__copy {
+        &>span {
+            display: inline-block;
+            margin-right: 0.4em;
+        }
+    }
 }
+
 
 @import 'media'
