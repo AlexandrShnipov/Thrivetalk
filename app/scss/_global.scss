@@ -1,10 +1,18 @@
+@import 'vars';
+
 // min:0.8rem + 0.225% from width devaice (13.4px)..... for devaice 1440 px: 0.8 rem (12.8px)+ 0.225% from 1440 px (3.2px)= 16px (1rem)
 :root {
     font-size: calc(0.8rem + 0.225vw);
 }
 
+body{
+    color: $default;
+    font-family: Larsseit_bold, sans-serif;
+}
+
 .container-fluid {
     max-width: 1440px;
+    // max-width: 100wh;
     // padding-left: 1px;
     // padding-right: 1px;
     margin: 0 auto;
@@ -29,9 +37,31 @@
     line-height: 1.25em;
 }
 
+// !
 .section__description{
     padding-top: 10.75%;
       padding-right: 18.29%;
     padding-bottom: 5.25%;
+}
+
+// width = height
+
+.planning__item-wrap{
+    position: relative;
+    
+
+    &::before{
+        content: '';
+        display: block;
+        padding-bottom: 100%;
+    }
+}
+
+.square{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
 

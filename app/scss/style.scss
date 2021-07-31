@@ -20,7 +20,7 @@
         margin-left: 11.2rem;
         margin-right: 8.1rem;
         padding-top: 1.7rem;
-                display: flex;
+        display: flex;
         justify-content: space-between;
     }
 
@@ -49,7 +49,7 @@
     &-link {
         font-size: 0.9rem;
         line-height: 1.1;
-        color: $default;
+        color: inherit;
         padding-left: 0.9em;
         padding-right: 0.9em;
         padding-bottom: 0.9em;
@@ -83,12 +83,12 @@
 }
 
 .description {
-       &__container {
+    &__container {
         margin-left: 11.2rem;
         display: grid;
         grid-template: minmax(765px, auto) / repeat(auto-fit, minmax(500px, 1fr));
         overflow-x: clip;
-            }
+    }
 
     &__content {
         display: grid;
@@ -100,18 +100,15 @@
     }
 
     &__slogan {
-        font-family: Larsseit_bold, sans-serif;
         font-size: 3rem;
         line-height: 1.1;
         letter-spacing: -0.035em;
-        color: $default;
         max-width: 10.1em;
     }
 
     &__text {
         @extend %text-font;
         line-height: 1.9;
-        color: $default;
         max-width: 19.7em;
     }
 
@@ -123,8 +120,6 @@
     }
 
     &__link {
-        font-family: Larsseit_bold, sans-serif;
-        font-size: 1rem;
         line-height: 1.25;
         letter-spacing: 0.1em;
         align-self: start;
@@ -179,7 +174,6 @@
     }
 
     &__slogan {
-        font-family: Larsseit_bold, sans-serif;
         color: $light;
         font-size: 2.25rem;
         line-height: 0.64;
@@ -226,13 +220,11 @@
     }
 
     &__title {
-        color: $default;
         margin-right: 10%;
     }
 
     &__text {
         @extend %text-font;
-        color: $default;
         line-height: 1.48;
         letter-spacing: 0.005em;
         max-width: 24.67em;
@@ -249,37 +241,38 @@
 
     &__items {
         display: grid;
-        grid-template-columns: repeat(4, 360px);
-        grid-auto-rows: 360px;
+        grid-template-columns: repeat(4, 25%);
+        // grid-auto-rows: 360px;
         margin-bottom: 7.5rem;
 
     }
 
-    &__item {
+    &__item--small {
         padding-top: 4.5rem;
         padding-left: 4.88rem;
         padding-right: 3.13rem;
     }
 
-    &__item:first-child {
+    &__item-wrap--small:first-child .planning__item--small {
         background-color: #FFE2DE;
     }
 
-    &__item:nth-child(2) {
+    &__item-wrap--small:nth-child(2) .planning__item--small {
         background-color: #C4E769;
     }
 
-    &__item:nth-child(3) {
+    &__item-wrap--small:nth-child(3) .planning__item--small {
         background-color: #62D0DF;
     }
 
-    &__item:last-child {
+    &__item-wrap--small:last-child .planning__item--small {
         background-color: #0052C1;
     }
 
     &__slogan {
         display: inline-block;
-        font-family: Larsseit_bold, sans-serif;
+        max-width: 255px;
+        width: 100%;
         color: $light;
         font-size: 2rem;
         line-height: 1.2;
@@ -293,7 +286,7 @@
             top: 0;
             left: -25.5px;
             height: 1px;
-            width: 255px;
+            width: 100%;
             background-color: #fff;
         }
 
@@ -311,42 +304,45 @@
 
     &__items--big {
         display: grid;
-        grid-template-columns: repeat(3, 480px);
-        grid-auto-rows: 480px;
+        grid-template-columns: repeat(3, 1fr);
+        // grid-auto-rows: 480px;
     }
 
     &__item--big {
         padding-top: 6rem;
         padding-left: 6.5rem;
-        padding-right: 13.69rem;
+        padding-right: 2rem;
     }
 
-    &__item--big:first-child {
+    &__item-wrap--big:first-child .planning__item--big {
         background-color: #22356F;
     }
 
-    &__item--big:nth-child(2) {
+    &__item-wrap--big:nth-child(2) .planning__item--big {
         background-color: #0052C1;
     }
 
-    &__item--big:nth-child(3) {
+    &__item-wrap--big:nth-child(3) .planning__item--big {
         background: url(../images/planning-img.png) no-repeat;
+        background-size: 100% 100%;
     }
 
-    &__item--big:nth-child(4) {
+    &__item-wrap--big:nth-child(4) .planning__item--big {
         background-color: #62D0DF;
     }
 
-    &__item--big:nth-child(5) {
+    &__item-wrap--big:nth-child(5) .planning__item--big {
         background-color: #DEE1FF;
     }
 
-    &__item--big:last-child {
+    &__item-wrap--big:last-child .planning__item--big {
         background-color: #8F00FF;
     }
 
     &__slogan--big {
         padding-top: 0.94em;
+        max-width: 340px;
+        width: 100%;
         position: relative;
     }
 
@@ -357,7 +353,7 @@
             top: 0;
             left: -34px;
             height: 1px;
-            width: 340px;
+            width: 100%;
             background-color: #fff;
         }
 
@@ -381,20 +377,16 @@
     &__card {
         display: grid;
         padding: 3.44rem 4.81rem 4.81rem 6.56rem;
-        color: $default;
         font-family: Larsseit_regular, sans-serif
     }
 
     &__card-title {
-        font-family: inherit;
         font-size: 1.75rem;
         line-height: 1.25;
         margin-bottom: 1.75em;
     }
 
     &__card-text {
-        font-family: inherit;
-        font-size: 1rem;
         line-height: 1.69;
         letter-spacing: -0.03em;
         color: rgba(34, 53, 111, 0.5);
@@ -405,7 +397,6 @@
 .addition {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    color: $default;
 
     // &__img-wrap{
     //     position: relative;
@@ -427,16 +418,13 @@
 
 
     &__title {
-        color: inherit;
         margin-bottom: 14.06em;
     }
 
     &__text {
-        font-family: Larsseit_bold, sans-serif;
         font-size: 2.25rem;
         line-height: 1.5;
         letter-spacing: -0.01em;
-        color: inherit;
         margin-bottom: 4.22em;
     }
 
@@ -464,7 +452,6 @@
     }
 
     &__slogan {
-        font-family: Larsseit_bold, sans-serif;
         font-size: 4rem;
         line-height: 1.25;
         margin-bottom: 1.07em;
@@ -488,6 +475,8 @@
     grid-template: 1fr / auto 1fr;
     grid-auto-flow: row;
     font-size: 0.875rem;
+    color: rgba(34, 53, 111, 0.5);
+    letter-spacing: -0.006em;
 
     &__items {
         display: grid;
@@ -499,10 +488,7 @@
     }
 
     &__item-title {
-        font-family: Larsseit_bold, sans-serif;
-        font-size: inherit;
         letter-spacing: -0.006em;
-        color: $default;
         text-transform: uppercase;
         margin-bottom: 3.9em;
     }
@@ -510,10 +496,8 @@
     &__item-text {
         max-width: 75%;
         font-family: Larsseit_regular, sans-serif;
-        font-size: inherit;
         line-height: 1.79;
-        letter-spacing: -0.006em;
-        color: rgba(34, 53, 111, 0.5);
+
 
         &>span {
             display: block;
@@ -530,11 +514,13 @@
 
     &__item-link {
         display: inline-block;
-        font-size: inherit;
+        color: inherit;
+
     }
 
     &__item-link--email {
         padding-top: 0.7em;
+        color: #006DFF;
     }
 }
 
@@ -543,7 +529,6 @@
     display: grid;
     grid-area: footer;
     background-color: #62D0DF;
-    font-family: Larsseit_bold, sans-serif;
     color: $light;
     padding: 2em 0 1.625em 11.2em;
 
