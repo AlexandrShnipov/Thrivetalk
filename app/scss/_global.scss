@@ -11,6 +11,9 @@
     @media (max-width:1023px) {
         font-size: calc(1rem + 0.225vw);
     }
+    @media (max-width:1023px) {
+        font-size: calc(1.2rem + 0.225vw);
+}
 }
 
     body {
@@ -38,6 +41,10 @@
         line-height: 1.4em;
         letter-spacing: -0.035em;
         color: #62D0DF;
+
+        @media (max-width:1023px){
+            font-size: 2rem;
+        }
     }
 
     .section__link {
