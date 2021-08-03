@@ -1,13 +1,25 @@
 let burgerBtn = document.querySelector('.burger-btn');
+let menuOpen = document.querySelector('.menu')
 
-function burgerBtnActive (){
+// function burgerBtnActive (){
 
-burgerBtn.addEventListener('click' , toggleBurgerBtn);
+// burgerBtn.addEventListener('click' , toggleBurgerBtn);
+// }
+
+// burgerBtnActive()
+
+// function toggleBurgerBtn() {
+//   console.log('close');
+//   burgerBtn.classList.toggle('active');
+// }
+function menuMobile() {
+  burgerBtn.addEventListener('click' , toggleMobileMenu)
 }
 
-burgerBtnActive()
+menuMobile()
 
-function toggleBurgerBtn() {
-  console.log('close');
+function toggleMobileMenu() {
+  console.log("active")
   burgerBtn.classList.toggle('active');
+  menuOpen.classList.toggle('active');
 }
