@@ -1,8 +1,4 @@
-@import 'reset';
-@import 'fonts';
-@import 'global';
-@import 'vars';
-@import 'burger';
+@import 'main';
 
 .wrapper {
     display: grid;
@@ -90,8 +86,8 @@
 
 .menu {
     @media (max-width:767px) {
-        position: absolute;
-        bottom: 150%;
+        position: fixed;
+        bottom: 178%;
         left: 0;
         padding-right: 0;
         width: 100%;
@@ -102,9 +98,10 @@
         background-color: #62D0DF;
         color: $light;
         box-shadow: -2px 3px 17px 0px #000;
+        z-index: 3;
 
         &.active {
-            bottom: -178%;
+            bottom: 55%;
 
         }
     }

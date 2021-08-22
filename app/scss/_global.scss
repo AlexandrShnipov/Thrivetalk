@@ -7,7 +7,6 @@
     @media (min-width:1440px) {
         font-size: 1em;
     }
-
 }
 
 body {
@@ -15,38 +14,10 @@ body {
     font-family: Larsseit_bold, sans-serif;
 }
 
-.link {
-    border: 1px solid transparent;
-    transition: all .5s;
-
-    &:hover {
-        opacity: 0.8;
-        border: 1px solid rgb(140, 64, 240);
-    }
-}
-
 .container-fluid {
-    max-width: 90em;
+    // max-width: 90em;
     margin: 0 auto;
 
-}
-
-.title {
-    @extend %title-font;
-}
-
-.logo__link {
-    font-family: Larsseit_bold, sans-serif;
-    font-size: 1.5rem;
-    line-height: 1.4;
-    letter-spacing: -0.035em;
-    color: #62D0DF;
-}
-
-.section__link {
-    font-family: Larsseit_bold, sans-serif;
-    font-size: 1rem;
-    line-height: 1.25;
 }
 
 // !
@@ -65,58 +36,5 @@ body {
     }
 }
 
-// width = height
-.planning__item-wrap {
-    position: relative;
 
 
-    &::before {
-        content: '';
-        display: block;
-        padding-bottom: 100%;
-
-        @media (max-width:1024px) {
-            padding-bottom: 50%;
-        }
-    }
-}
-
-.square {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-}
-
-// width = height
-
-
-// adaptive section__img
-.section__img-wrap {
-    position: relative;
-    padding: 0 0 90% 0;
-}
-
-.section__img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-
-    @media (max-width:767px) {
-        height: 90%;
-    }
-}
-
-.section__text {
-    font-size: 2.25rem;
-    line-height: 1.5;
-    letter-spacing: -0.01em;
-
-    @media (max-width:767px) {
-        font-size: 1.5rem;
-    }
-}
