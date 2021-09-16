@@ -101,7 +101,7 @@
         z-index: 3;
 
         &.active {
-            bottom: 55%;
+            bottom: 47%;
 
         }
     }
@@ -971,10 +971,11 @@
         }
 
         &>span {
-            position: absolute;
-            left: -1.1em;
-            top: 13%;
-
+            @media (min-width:768px) {
+                position: absolute;
+                left: -1.1em;
+                top: 13%;
+            }
         }
     }
 }
