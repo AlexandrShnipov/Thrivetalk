@@ -101,13 +101,7 @@
         z-index: 3;
 
         &.active {
-            bottom: 40%;
-        }
-    }
-
-    @media (max-width:500px) {
-        &.active {
-            bottom: 43%;
+            bottom: 44%;
         }
     }
 
